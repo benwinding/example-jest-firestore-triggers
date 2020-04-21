@@ -1,0 +1,20 @@
+{
+    "name": "functions",
+    "description": "Test Firebase Triggers",
+    "scripts": {
+        "start-emulator": "yarn firebase emulators:start --only firestore,functions --inspect-functions 9229",
+        "test": "yarn firebase emulators:exec --only firestore,functions --inspect-functions 9229 \"yarn test-jest\"",
+        "test-watch": "yarn firebase emulators:exec --only firestore,functions --inspect-functions 9229 \"yarn test-jest-watch\"",
+        "test-jest": "yarn jest --forceExit --detectOpenHandles",
+        "test-jest-watch": "yarn jest --watch --detectOpenHandles"
+    },
+    "main": "src/index.js",
+    "devDependencies": {
+        "@firebase/testing": "0.19.1",
+        "firebase-admin": "^8.10.0",
+        "firebase-functions": "^3.5.0",
+        "firebase-tools": "^7.16.1",
+        "jest": "25.4.0"
+    },
+    "private": true
+}
